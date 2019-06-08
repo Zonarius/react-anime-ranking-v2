@@ -1,26 +1,52 @@
+import { Content } from './Content';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="main-content">
+        <Header />
+        <Content />
+      </div>
+      <Footer />
+    </>
   );
 }
 
 export default App;
+
+function Header() {
+  return (
+    <section className="hero is-primary">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">
+            Anime Ranking
+          </h1>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="login-fields">
+        <div className="field">
+          <div className="control">
+            <input className="input" type="text" />
+          </div>
+        </div>
+
+        <div className="field">
+          <div className="control">
+            <input className="input" type="password" />
+          </div>
+        </div>
+
+        <input className="button is-primary" type="submit" value="Login" />
+      </div>
+    </footer>
+  )
+}
